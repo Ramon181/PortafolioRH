@@ -13,12 +13,7 @@
     Bienvenido a mi sitio web.
   </p>
   <div class="w-[345px] flex justify-between h-[50px]">
-    <a
-      href="/contacto"
-      class="relative scale-up-hor-center w-[150px] h-[100%] bg-transparent cursor-pointer text-[#007d99] border-[#007d99] border-2 justify-center items-center rounded inline-flex text-[19px] font-[600] tracking-tighter"
-    >
-      Contacto
-    </a>
+    <a href="/contacto" class="scale-up-hor-center button">Contacto</a>
   </div>
 </div>
 
@@ -40,9 +35,58 @@
     animation: movimientoText 2.3s ease forwards;
   }
   .scale-up-hor-center {
-	-webkit-animation: scale-up-hor-center 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-hor-center 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
+    -webkit-animation: scale-up-hor-center 1.4s
+      cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: scale-up-hor-center 1.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    border: none;
+    color: black;
+    padding: 8px;
+    width: 150px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border: black solid 2px;
+    border-radius: 4px;
+  }
+
+  .button:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px #007d99;
+    color: #000;
+    border: #007d99 solid 2px;
+  }
+
+  .button:after {
+    content: "";
+    background: #007d99;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+
+  .button:focus {
+    outline: 0;
+  }
 
   @keyframes movimientoText {
     0% {
@@ -76,32 +120,31 @@
   }
 
   .scale-up-hor-center {
-	-webkit-animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
+    -webkit-animation: scale-up-hor-center 0.4s
+      cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: scale-up-hor-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
 
-
- @-webkit-keyframes scale-up-hor-center {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+  @-webkit-keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
   }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+  @keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
   }
-}
-@keyframes scale-up-hor-center {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
 
   @-webkit-keyframes tracking-in-expand {
     0% {

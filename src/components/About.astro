@@ -137,7 +137,7 @@
     </div>
     <a class="cv" href="../../public/RamonCV.pdf" download="RamonCV">
       <button
-        class="cursor-pointer boton-and-top bg-transparent w-fit flex flex-row text-base text-[#007d99] relative z-10 mx-auto my-5 px-[22px] py-2.5 border-2 border-solid transition-[3.5s] border-[#007d99] hover:bg-[#007d99] hover:text-black"
+        class="boton-and-top button"
       >
         Descargar CV <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -202,6 +202,43 @@
   .rigth-and-left:nth-of-type(6){
     animation: rigth-and-left 1.6s ease 0s 1 normal forwards;
   }
+
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    transition-duration: 0.4s;
+    border: black solid 2px;
+    border-radius: 4px;
+  }
+
+  .button:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px #007d99;
+    color: #000;
+    border: #007d99 solid 2px;
+  }
+
+  .button:after {
+    content: "";
+    background: #007d99;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  .button:focus {
+    outline: 0;
+  }
+
   @keyframes rigth-and-left {
 	0% {
 		opacity: 0;

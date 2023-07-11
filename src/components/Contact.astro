@@ -1,6 +1,7 @@
 <div class="flex justify-center items-center w-full h-full z-30">
   <div class="container mx-auto my-4 px-4 lg:px-20">
     <form
+      id="contactForm"
       class="w-full scale-up-hor-left p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl"
     >
       <div class="flex">
@@ -59,13 +60,10 @@
         </div>
       </div>
       <div class="my-2 w-1/2 lg:w-1/4">
-        <button
-          class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
-        >
-          Enviar
-        </button>
+        <button type="submit" class="button"> Enviar</button>
       </div>
     </form>
+    <script is:inline src="../../public/contact.js"></script>
     <div
       class="w-[45%] scale-up-hor-right mt-[-6rem] px-8 py-2 ml-auto bg-blue-900 rounded-2xl"
     >
@@ -168,16 +166,67 @@
     transform: translateY(-25px);
   }
   .scale-up-hor-left {
-    -webkit-animation: scale-up-hor-left 1.5s cubic-bezier(0.39, 0.575, 0.565, 1)
-      both;
+    -webkit-animation: scale-up-hor-left 1.5s
+      cubic-bezier(0.39, 0.575, 0.565, 1) both;
     animation: scale-up-hor-left 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 
   .scale-up-hor-right {
-    -webkit-animation: scale-up-hor-right 1.5s cubic-bezier(0.39, 0.575, 0.565, 1)
-      both;
+    -webkit-animation: scale-up-hor-right 1.5s
+      cubic-bezier(0.39, 0.575, 0.565, 1) both;
     animation: scale-up-hor-right 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    border: none;
+    color: black;
+    padding: 10px;
+    width: 150px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border: black solid 2px;
+    border-radius: 4px;
+  }
+
+  .button:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px #007d99;
+    color: #000;
+    border: #007d99 solid 2px;
+  }
+
+  .button:after {
+    content: "";
+    background: #007d99;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+
+  .button:focus {
+    outline: 0;
+  }
+
   @-webkit-keyframes scale-up-hor-left {
     0% {
       -webkit-transform: scaleX(0.4);
