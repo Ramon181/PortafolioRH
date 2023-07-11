@@ -1,0 +1,130 @@
+<div class="z-30 w-full max-w-[600px]">
+  <h1 class="text-6xl uppercase font-black">
+    <span class="movimiento1">Hola,</span>
+
+    <span class="movimiento2 text-[38px] block"
+      >Soy <span class="letra">R</span>amon,</span
+    >
+    <span class="movimiento3 text-[38px] block">Desarrollador Web.</span>
+  </h1>
+  <p
+    class="text-[16px] font-sans font-semibold tracking-in-expand text-gray-800 mt-2 mb-14"
+  >
+    Bienvenido a mi sitio web.
+  </p>
+  <div class="w-[345px] flex justify-between h-[50px]">
+    <a
+      href="/contacto"
+      class="relative scale-up-hor-center w-[150px] h-[100%] bg-transparent cursor-pointer text-[#007d99] border-[#007d99] border-2 justify-center items-center rounded inline-flex text-[19px] font-[600] tracking-tighter"
+    >
+      Contacto
+    </a>
+  </div>
+</div>
+
+<style>
+  .letra {
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: 700;
+    color: #007d99;
+    text-shadow: 4px 4px #000000;
+  }
+  .movimiento1 {
+    animation: movimientoText1 2.8s ease forwards;
+  }
+  .movimiento2 {
+    animation: movimientoText2 2.3s ease forwards;
+  }
+  .movimiento3 {
+    animation: movimientoText 2.3s ease forwards;
+  }
+  .scale-up-hor-center {
+	-webkit-animation: scale-up-hor-center 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-hor-center 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+  @keyframes movimientoText {
+    0% {
+      transform: translatex(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatex(0);
+      opacity: 1;
+    }
+  }
+  @keyframes movimientoText1 {
+    0% {
+      transform: translatex(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatex(0);
+      opacity: 1;
+    }
+  }
+  @keyframes movimientoText2 {
+    0% {
+      transform: translatex(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatex(0);
+      opacity: 1;
+    }
+  }
+
+  .scale-up-hor-center {
+	-webkit-animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+ @-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+
+  @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>

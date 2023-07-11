@@ -1,0 +1,14 @@
+---
+import SideBar from '../components/SideBar.astro';
+import Home from '../components/Home.astro'
+import Layout from '../layouts/Layout.astro';
+import Photo from '../components/Photo.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main class=" flex px-[10%] py-0 items-center h-screen">
+		<SideBar/>
+		<Home/>
+		<Photo/>
+	</main>
+</Layout>

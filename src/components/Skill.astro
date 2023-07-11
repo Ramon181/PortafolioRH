@@ -1,0 +1,76 @@
+---
+const { ability,titles } = Astro.props;
+---
+
+<article title={titles} class="badge scale-up-center">
+  <div class="roundeds"><img class="w-4/5 h-4/5" src={ability} alt="" /></div>
+</article>
+<style>
+  .badge {
+    margin: 1em 2em;
+    width: 6.4em;
+    height: 6.4em;
+    border-radius: 20%;
+    display: inline-block;
+    top: 0;
+    transition: all 0.2s ease;
+    box-shadow: 8px 10px 12px 3px rgba(0, 0, 0, 0.43);
+  }
+  .roundeds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: rgb(241, 241, 241);
+    position: absolute;
+    margin: 15px 16px auto;
+    z-index: 10;
+    border-radius: 30%;
+    box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.23);
+  }
+  .rounded i.fab {
+    font-size: 2.6em;
+    margin-top: 16px;
+  }
+
+  .scale-up-center {
+    -webkit-animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1)
+      both;
+    animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    transition: 0.5s, color 0.1s;
+    -webkit-transition: 0.5s, color 0.1s;
+    -moz-transition: 0.5s, color 0.1s;
+    background: rgb(73, 73, 73);
+    color: deepskyblue;
+  }
+
+  .scale-up-center:hover {
+    background-color: deepskyblue;
+    box-shadow: 0 8px 8px 0 #bebbbc, 0 8px 8px 0 #adadab;
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    -moz-transform: translate(0px, 5px);
+  }
+ 
+  @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+</style>

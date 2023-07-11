@@ -1,0 +1,114 @@
+---
+import Card from "./Card.astro";
+const projectsList = [
+  {
+    id: "app food",
+    img: "../../img/Proyectos/foodApp.PNG",
+    titles: "Desarrollo Web",
+    name: "App Food",
+    description:
+      "App Foods es una SPA (Single Page Application) realizada en el marco académico del Bootcamp SoyHenry. El mismo fue realizado con las tecnologías que vimos en el Bootcamp.",
+    skill: [
+      "https://api.iconify.design/logos/javascript.svg?width=34&height=34",
+      "https://api.iconify.design/logos/react.svg?width=34&height=34",
+      "https://api.iconify.design/vscode-icons/file-type-node.svg?width=34&height=34",
+      "https://api.iconify.design/devicon/express.svg?width=34&height=34",
+      "https://api.iconify.design/logos/postgresql.svg?width=34&height=34",
+    ],
+    front: "https://github.com/Ramon181/api-food-main",
+    back: "https://github.com/Ramon181/API-FOOD",
+    webSite: "https://cooks-great.vercel.app/",
+  },
+  {
+    id: "tables european",
+    img: "../../img/Proyectos/tablesEuropean.PNG",
+    titles: "Desarrollo Web",
+    name: "Tables European",
+    description:
+      "App Foods es una SPA (Single Page Application) realizada en el marco académico del Bootcamp SoyHenry. El mismo fue realizado con las tecnologías que vimos en el Bootcamp.",
+    skill: [
+      "https://api.iconify.design/logos/javascript.svg?width=34&height=34",
+      "https://api.iconify.design/logos/react.svg?width=34&height=34",
+      "https://api.iconify.design/vscode-icons/file-type-node.svg?width=34&height=34",
+      "https://api.iconify.design/devicon/express.svg?width=34&height=34",
+      "https://api.iconify.design/logos/postgresql.svg?width=34&height=34",
+    ],
+    front: "https://github.com/Ramon181/api-food-main",
+    back: "https://github.com/Ramon181/API-FOOD",
+    webSite: "https://cooks-great.vercel.app/",
+  },
+];
+---
+
+<section class="w-full max-w-[2000px] text-center mx-auto my-[3em] z-30">
+  <h2 class="text-center scale-up-hor-right text-[40px] uppercase font-black text-gray-800 px-0 py-5">
+    Proyectos
+  </h2>
+  <div class="flex flex-row justify-center items-center">
+    {
+      projectsList.map(
+        ({
+          id,
+          img,
+          titles,
+          name,
+          description,
+          skill,
+          front,
+          back,
+          webSite,
+        }) => {
+          return (
+            <Card
+              id={id}
+              img={img}
+              titles={titles}
+              name={name}
+              description={description}
+              skill={skill}
+              front={front}
+              back={back}
+              webSite={webSite}
+            />
+          );
+        }
+      )
+    }
+  </div>
+</section>
+
+<style>
+   .scale-up-hor-right {
+    -webkit-animation: scale-up-hor-right 1s
+      cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: scale-up-hor-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+  @-webkit-keyframes scale-up-hor-right {
+    0% {
+      -webkit-transform: scaleX(0.4);
+      transform: scaleX(0.4);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
+  }
+  @keyframes scale-up-hor-right {
+    0% {
+      -webkit-transform: scaleX(0.4);
+      transform: scaleX(0.4);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
+  }
+</style>
