@@ -1,22 +1,29 @@
 ---
-const { id, img, titles, name, description, skill } = Astro.props;
+const { id, img, titles, name, description, skill, front, back, webSite } =
+  Astro.props;
 ---
 
-<div class="card whitespace-normal">
-  <div class="image">
-    <img src={img} />
+<div
+  class="flex drop-shadow-lg flex-col sm:flex-row lg:flex-row justify-center w-full h-full bg-gray-50 m-2 rounded-lg"
+>
+  <div class="w-full sm:w-2/4 lg:w-2/4">
+    <img class="h-full rounded-xl" src={img} />
   </div>
-  <div class="details">
-    <div class="center">
-      <h1>{titles}<br /><span>{name}</span></h1>
-      <p>
+  <div class="w-full sm:w-2/4 lg:w-2/4">
+    <div class="p-2">
+      <h2
+        class="text-center text-[30px] uppercase font-black text-gray-800 px-0 py-2"
+      >
+        {name}
+      </h2>
+      <p class="leading-[22px] mx-1 text-[18px">
         {description}
       </p>
-      <ul>
+      <ul class="flex flex-row justify-center">
         {
           skill.map(e => {
             return (
-              <li>
+              <li class=" m-3">
                 <a href="#">
                   <img src={e} alt="" />
                 </a>
@@ -25,97 +32,15 @@ const { id, img, titles, name, description, skill } = Astro.props;
           })
         }
       </ul>
+      <div class="w-full px-6 mt-4 inline-block">
+        <a target="_blank" href={front}
+          ><button
+            type="button"
+            class="rounded-xl text-xl font-semibold text-white shadow-sm w-full bg-gray-700 hover:brightness-110"
+            >Ver</button
+          ></a>
+      </div>
+      
     </div>
   </div>
 </div>
-<style>
-  .card {
-    z-index: 30;
-    position: relative;
-    border-radius: 3px;
-    height: 340px;
-    width: 100%;
-    margin: 10px;
-    background: #000;
-    display: inline-block;
-  }
-  .card .image {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 3px;
-  }
-  .card .image img {
-    width: 140%;
-    transition: 0.5s;
-    border-radius: 3px;
-    height: 100%;
-  }
-  .card:hover .image img {
-    opacity: 0.5;
-    transform: translateX(30%); /*100%*/
-  }
-  .card .details {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70%; /*100%*/
-    height: 100%;
-    background: #007d99;
-    transition: 0.5s;
-    transform-origin: left;
-    transform: perspective(2000px) rotateY(-90deg);
-  }
-  .card:hover .details {
-    transform: perspective(2000px) rotateY(0deg);
-  }
-  .card .details .center {
-    padding: 20px;
-    text-align: center;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .card .details .center h1 {
-    margin: 0;
-    padding: 0;
-    color: #007d99;
-    line-height: 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-  }
-  .card .details .center h1 span {
-    font-size: 14px;
-    color: #262626;
-  }
-  .card .details .center p {
-    margin: 10px 0;
-    padding: 0;
-    width: 100%;
-    text-indent: 2rem;
-    color: #262626;
-  }
-  .card .details .center ul {
-    margin: 10px auto 0;
-    padding: 0;
-    display: table;
-  }
-  .card .details .center ul li {
-    list-style: none;
-    margin: 0 5px;
-    float: left;
-  }
-  .card .details .center ul li a {
-    display: block;
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    transform: 0.5s;
-  }
-  .card .details .center ul li a:hover {
-    background: #007d99;
-  }
-</style>

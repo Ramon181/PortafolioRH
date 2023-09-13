@@ -14,10 +14,13 @@
       desarrollo e implementación de varios proyectos tanto de forma individual como
       grupal.
     </p>
-    <div class="flex sobremi">
+    <div class="flex flex-col sm:flex-row lg:flex-row  ">
       <!-- datos personales -->
-      <div class="w-6/12 fila">
-        <h3 class="text-[28px] mb-[25px] font-black">Datos Personales</h3>
+      <div class=" w-full sm:w-6/12 lg:w-6/12 fila">
+        <div class=" flex justify-center sm:justify-start lg:justify-start">
+          <h3 class="text-[28px] mb-[25px] font-black">Datos Personales</h3>
+
+        </div>
         <ul class="col">
           <li class="mx-0 my-[27px]">
             <strong class="inline-block text-[#007d99] w-[130px]"
@@ -52,8 +55,11 @@
         </ul>
       </div>
       <!-- intereses -->
-      <div class="w-6/12">
-        <h3 class="text-[28px] mb-[25px] font-black rigth-and-left">Intereses</h3>
+      <div class="w-full sm:w-6/12 lg:w-6/12">
+        <div class=" flex justify-center sm:justify-start lg:justify-start">
+          <h3 class="text-[28px] mb-[25px] font-black rigth-and-left">Intereses</h3>
+
+        </div>
         <div class="flex flex-wrap">
           <div
             class="rigth-and-left w-[100px] h-[100px] font-semibold bg-transparent border-[#007d99] text-[#007d99] border-2 flex flex-col items-center justify-center transition-[0.3s] ml-0 mr-[15px] mt-0 mb-[15px] rounded-[10px] hover:text-black hover:bg-[#007d99]"
@@ -154,54 +160,7 @@
   </div>
 </section>
 <style>
-  .top-and-boton {
-    animation: top-and-boton 1.6s ease 0s 1 normal forwards;
-  }
-  .top-and-boton-otro {
-    animation: top-and-boton 2.2s ease 0s 1 normal forwards;
-  }
-
-  .sobremi .fila h3 {
-    animation: sobremi 1.5s ease 0s 1 normal forwards;
-  }
-
-  .sobremi .fila .col li:nth-of-type(1) {
-    animation: sobremi 1.8s ease 0s 1 normal forwards;
-  }
-  .sobremi .fila .col li:nth-of-type(2) {
-    animation: sobremi 2s ease 0s 1 normal forwards;
-  }
-  .sobremi .fila .col li:nth-of-type(3) {
-    animation: sobremi 2.4s ease 0s 1 normal forwards;
-  }
-  .sobremi .fila .col li:nth-of-type(4) {
-    animation: sobremi 2.8s ease 0s 1 normal forwards;
-  }
-  .sobremi .fila .col li:nth-of-type(5) {
-    animation: sobremi 3s ease 0s 1 normal forwards;
-  }
-
-  .boton-and-top{
-    animation: boton-and-top 1.6s ease 0s 1 normal forwards;
-  }
-  .rigth-and-left:nth-of-type(1){
-    animation: rigth-and-left 1.6s ease 0s 1 normal forwards;
-  }
-  .rigth-and-left:nth-of-type(2){
-    animation: rigth-and-left 1.6s ease 0s 1 normal forwards;
-  }
-  .rigth-and-left:nth-of-type(3){
-    animation: rigth-and-left 2s ease 0s 1 normal forwards;
-  }
-  .rigth-and-left:nth-of-type(4){
-    animation: rigth-and-left 2.4s ease 0s 1 normal forwards;
-  }
-  .rigth-and-left:nth-of-type(5){
-    animation: rigth-and-left 2.8s ease 0s 1 normal forwards;
-  }
-  .rigth-and-left:nth-of-type(6){
-    animation: rigth-and-left 1.6s ease 0s 1 normal forwards;
-  }
+  
 
   .button {
     display: flex;
@@ -239,49 +198,4 @@
     outline: 0;
   }
 
-  @keyframes rigth-and-left {
-	0% {
-		opacity: 0;
-		transform: translateX(150px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-  @keyframes boton-and-top {
-	0% {
-		opacity: 0;
-		transform: translateY(150px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-  @keyframes sobremi {
-	0% {
-		opacity: 0;
-		transform: translateX(-150px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-  @keyframes top-and-boton {
-    0% {
-      opacity: 0;
-      transform: translateY(-150px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 </style>

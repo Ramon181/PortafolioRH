@@ -1,4 +1,4 @@
-<div class="z-30 w-full max-w-[600px]">
+<div class="w-full z-20 flex justify-center lg:block lg:justify-start lg:items-start items-center text-center lg:text-left flex-col">
   <h1 class="text-6xl uppercase font-black">
     <span class="movimiento1">Hola,</span>
 
@@ -12,8 +12,8 @@
   >
     Bienvenido a mi sitio web.
   </p>
-  <div class="w-[345px] flex justify-between h-[50px]">
-    <a href="/contacto" class="scale-up-hor-center button">Contacto</a>
+  <div class=" flex justify-between h-[50px]">
+    <a href="/contacto" class="button">Contacto</a>
   </div>
 </div>
 
@@ -86,88 +86,5 @@
 
   .button:focus {
     outline: 0;
-  }
-
-  @keyframes movimientoText {
-    0% {
-      transform: translatex(-100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translatex(0);
-      opacity: 1;
-    }
-  }
-  @keyframes movimientoText1 {
-    0% {
-      transform: translatex(-100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translatex(0);
-      opacity: 1;
-    }
-  }
-  @keyframes movimientoText2 {
-    0% {
-      transform: translatex(100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translatex(0);
-      opacity: 1;
-    }
-  }
-
-  .scale-up-hor-center {
-    -webkit-animation: scale-up-hor-center 0.4s
-      cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    animation: scale-up-hor-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  }
-
-  @-webkit-keyframes scale-up-hor-center {
-    0% {
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1);
-    }
-  }
-  @keyframes scale-up-hor-center {
-    0% {
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1);
-    }
-  }
-
-  @-webkit-keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 </style>
